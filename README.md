@@ -32,3 +32,6 @@ Features will include:
   - For each character generated it will generate full qualified NPC's allowing you to quickly build a NPC "tree".
   - It will do this for each character until it reaches the Generation number. (MAX for dev purposes will be 2)
   - e.g. I run the character creation and it makes a NPC with a single parent, and a lover; it then goes on to fully develop the parent and the lover; then if the generation number is at 2 it will generate all NPC's required for their respective life events/lifepath's.
+
+**EXTRA NICE TO HAVE**:
+- [ ] Save generated NPC's into a formatted PDF document.
