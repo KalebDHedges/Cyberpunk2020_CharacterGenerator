@@ -8,34 +8,36 @@ namespace Cyberpunk2020_CharacterGenerator
 {
     internal class Actor
     {
-        public Actor(
-            Name name,
-            Role role,
-            Gender gender,
-            byte age,
-            Stats stats,
-            Skills skills,
-            Inventory equipment,
-            Inventory cybernetics)
+        public Actor(Name name,
+                     Role role,
+                     Gender gender,
+                     byte age,
+                     Stats stats,
+                     Skills skills,
+                     Inventory equipment,
+                     Inventory cybernetics,
+                     Lifepath lifepath)
         {
-            _name = name;
-            _role = role;
-            _gender = gender;
-            _age = age;
-            _stats = stats;
-            _skills = skills;
-            _equipment = equipment;
-            _cybernetics = cybernetics;
+            Name = name;
+            Role = role;
+            Gender = gender;
+            Age = age;
+            Stats = stats;
+            Skills = skills;
+            Equipment = equipment;
+            Cybernetics = cybernetics;
+            Lifepath = lifepath;
         }
 
-        public Name Name() { return _name; }
-        public Role Role() { return _role; }
-        public Gender Gender() { return _gender; }
-        public byte Age() { return _age; }
-        public Stats Stats() { return _stats; }
-        public Skills Skills() { return _skills; }
-        public Inventory Equipment() { return _equipment; }
-        public Inventory Cybernetics() { return _cybernetics; }
+        public Name Name { get; }
+        public Role Role { get; }
+        public Gender Gender { get; }
+        public byte Age { get; }
+        public Stats Stats { get; }
+        public Skills Skills { get; }
+        public Inventory Equipment { get; }
+        public Inventory Cybernetics { get; }
+        public Lifepath Lifepath { get; }
 
         public void Print()
         {
@@ -43,28 +45,21 @@ namespace Cyberpunk2020_CharacterGenerator
             string dividerSmall = new ('-', 80);
 
             Console.WriteLine(dividerBig);
-            Console.WriteLine($"| Name: {_name.GetFull()}\t| Role: {_role}\t| Gender: {_gender}| Age: {_age}\t|");
+            Console.WriteLine($"| Name: {Name.GetFull()}\t| Role: {Role}\t| Gender: {this.Gender}| Age: {this.Age}\t|");
 
             Console.WriteLine(dividerBig);
-            Console.WriteLine(_stats.ToString());
+            Console.WriteLine(Stats.ToString());
             Console.WriteLine(dividerSmall);
-            Console.WriteLine(_skills.ToString());
+            Console.WriteLine(Skills.ToString());
 
             Console.WriteLine(dividerBig);
-            Console.WriteLine(_equipment.ToString());
+            Console.WriteLine(Equipment.ToString());
             Console.WriteLine(dividerSmall);
-            Console.WriteLine(_cybernetics.ToString());
+            Console.WriteLine(Cybernetics.ToString());
 
+            Console.WriteLine(dividerBig);
+            Console.WriteLine(Lifepath.ToString());
             Console.WriteLine(dividerBig);
         }
-
-        private readonly Name _name;
-        private readonly Role _role;
-        private readonly Gender _gender;
-        private readonly byte _age;
-        private readonly Stats _stats;
-        private readonly Skills _skills;
-        private readonly Inventory _equipment;
-        private readonly Inventory _cybernetics;
     }
 }
