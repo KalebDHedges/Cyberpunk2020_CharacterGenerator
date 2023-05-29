@@ -1,4 +1,6 @@
-﻿namespace Cyberpunk2020_CharacterGenerator
+﻿using System.Net.Cache;
+
+namespace Cyberpunk2020_CharacterGenerator
 {
     internal static class Program
     {
@@ -11,7 +13,11 @@
 
             // 2. Start Generating Actor
             //   2.1 Gender
+            Gender g = (Gender)Die.RollDie(0, Enum.GetNames(typeof(Gender)).Length);
+
             //   2.2 Age
+            byte age = (byte)Die.RollDie(14, 40);
+
             //   2.3 Lifepath
             //     2.3.1 Origins and Personal Style
             //       2.3.1.1 Clothes
@@ -42,6 +48,8 @@
             //
             //   2.4 Name (dependent on Ethnicity)
             //   2.5 Role (influences Stats and Skills)
+            Role r = (Role)Die.RollDie(0, Enum.GetNames(typeof(Role)).Length);
+
             //   2.6 Stats
             //   2.7 Skills
             //   2.8 Equipment (Weapons and Armor)
