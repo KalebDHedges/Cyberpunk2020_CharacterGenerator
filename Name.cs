@@ -8,6 +8,9 @@ namespace Cyberpunk2020_CharacterGenerator
 {
     internal class Name
     {
+        // The empty constructor will be removed once the implementation is done
+        public Name() { }
+
         public Name(string firstName, string lastName) {
             _firstName = firstName;
             _lastName = lastName;
