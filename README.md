@@ -3,6 +3,7 @@
 A simple console application that will be able to create full Cyberpunk2020 TTRPG characters.
 
 Features will include:
+
 **Base Character Requirements**:
 - [ ] Name
 - [ ] Role
